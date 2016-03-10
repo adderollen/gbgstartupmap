@@ -75,10 +75,11 @@ body {
 }
 
 .open-about {
-  width: 60px;
+	top: 0;
+	height: 60px;
+	width: 60px;
 	position: absolute;
 	text-align: center;
-	bottom: 4em;
 	z-index: 2;
 	left: 0;
 	background: transparent;
@@ -104,6 +105,7 @@ body {
 	left: 7px;
 	top: 8px;
 	margin-bottom: -3px;
+	margin-top: 5px;
 }
 
 .white-img {
@@ -145,16 +147,16 @@ body {
 	text-align: center;
 	opacity: 0;
 	-webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
-  overflow: scroll;
+	transition: opacity 0.3s;
+	overflow: scroll;
 }
 
 .welcome .columns {
 	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
-  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
-  display: -ms-flexbox;      /* TWEENER - IE 10 */
-  display: -webkit-flex;     /* NEW - Chrome */
-  display: flex;
+	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;      /* TWEENER - IE 10 */
+	display: -webkit-flex;     /* NEW - Chrome */
+	display: flex;
 	margin-left: 1em;
 	margin-right: 1em;
 }
@@ -162,32 +164,32 @@ body {
 .welcome .column {
 	position: relative;
 	-webkit-box-flex: 1;      /* OLD - iOS 6-, Safari 3.1-6 */
-  -moz-box-flex: 1;         /* OLD - Firefox 19- */
-  -webkit-flex: 1;          /* Chrome */
-  -ms-flex: 1;              /* IE 10 */
-  flex: 1; 
+	-moz-box-flex: 1;         /* OLD - Firefox 19- */
+	-webkit-flex: 1;          /* Chrome */
+	-ms-flex: 1;              /* IE 10 */
+	flex: 1; 
 	padding: 1em;
 	text-align: left;
 }
 
 .welcome .column:nth-child(2):before {
-   content: "";
-  position: absolute;
-  left: 0;
-  top: 25%;
-  height: 60%;
-  width: 10px;
-  border-left: 1px solid rgb(0, 114, 179);
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 25%;
+	height: 60%;
+	width: 10px;
+	border-left: 1px solid rgb(0, 114, 179);
 }
 
 .welcome .column:nth-child(2):after {
-	 content: "";
-  position: absolute;
-  right: 0;
-  top: 25%;
-  height: 60%;
-  width: 10px;
-  border-left: 1px solid rgb(0, 114, 179);
+	content: "";
+	position: absolute;
+	right: 0;
+	top: 25%;
+	height: 60%;
+	width: 10px;
+	border-left: 1px solid rgb(0, 114, 179);
 }
 
 .welcome h1,
@@ -222,12 +224,12 @@ body {
 	background-color: #0072B3;
 	color: white;
 	font-size: 1.3rem;
-  border-radius: 10px;
-  margin-top: 1em;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: background-color 0.2s;
-  transition: background-color 0.2s;
+	border-radius: 10px;
+	margin-top: 1em;
+	border: none;
+	cursor: pointer;
+	-webkit-transition: background-color 0.2s;
+	transition: background-color 0.2s;
 }
 
 .welcome .open-map:hover {
@@ -269,17 +271,22 @@ p, ul {
 
 /* Phones */
 @media screen and (max-width: 700px), all and (orientation: portrait) {
+
+
+
+
 	.open-about {
+		top: initial;
 		right: 20px;
-    width: 48px;
-    height: 48px;
-    left: initial;
-    padding: 0;
-    bottom: 50px;
-    background: #0B799A;
-    border-radius: 100%;
-    box-shadow: 0 6px 13px 0 rgba(0,0,0,.23);
-    
+		width: 48px;
+		height: 48px;
+		left: initial;
+		padding: 0;
+		bottom: 50px;
+		background: #0B799A;
+		border-radius: 100%;
+		box-shadow: 0 6px 13px 0 rgba(0,0,0,.23);
+
 	}
 
 	.open-about p {
@@ -288,11 +295,11 @@ p, ul {
 
 	.open-about img {
 		width: 28px;
-    height: 28px;
-    left: 7px;
-    top: 10px;
-    margin-bottom: -8px;
-    margin-top: 4px;
+		height: 28px;
+		left: 7px;
+		top: 10px;
+		margin-bottom: -8px;
+		margin-top: 4px;
 	}
 
 	.white-img {
@@ -349,6 +356,15 @@ p, ul {
 
 	.welcome h3 {
 		margin-top: 0;
+	}
+
+	
+	.welcome .column:nth-child(2):before {
+		display: none;
+	}
+
+	.welcome .column:nth-child(2):after {
+		display: none;
 	}
 
 }
